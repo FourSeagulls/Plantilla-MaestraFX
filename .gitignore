@@ -1,0 +1,22 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+target/
+
+# Maven
+.mvn/
+log/
+logs/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.class
+*.log
+*.tmp
+
+# JavaFX cache
+*.fxml.bin

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Plantilla MaestraFX — Guía de Configuración y Uso</title>
+    <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+      margin: 2em auto;
+      max-width: 820px;
+      padding: 2em;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h1, h2, h3 {
+      color: #0056a3;
+    }
+    h1 { text-align: center; margin-bottom: 0.5em; }
+    h2 { margin-top: 2em; }
+    code, pre {
+      background: #f4f4f4;
+      border-radius: 6px;
+      padding: 0.3em 0.5em;
+      font-family: "Fira Code", monospace;
+    }
+    pre {
+      overflow-x: auto;
+      padding: 1em;
+    }
+    blockquote {
+      border-left: 4px solid #0056a3;
+      padding-left: 1em;
+      color: #555;
+      font-style: italic;
+      background: #f9f9f9;
+    }
+    ul, ol { margin-left: 1.5em; }
+    nav {
+      background: #eef5fb;
+      padding: 1em;
+      border-radius: 8px;
+      margin-bottom: 1.5em;
+      border-left: 4px solid #0056a3;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0056a3;
+    }
+    nav a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🧩 Plantilla MaestraFX</h1>
+<p style="text-align:center; font-style: italic;">Guía completa de configuración, uso y mantenimiento del entorno JavaFX en Fedora con IntelliJ IDEA y Maven</p>
+
+<hr>
+
+<h2>📚 Índice</h2>
+<nav>
+    <ul>
+        <li><a href="#requisitos">1. Requisitos previos</a></li>
+        <li><a href="#configuracion">2. Configuración del entorno</a></li>
+        <li><a href="#estructura">3. Estructura del proyecto</a></li>
+        <li><a href="#ejecucion">4. Ejecutar el proyecto</a></li>
+        <li><a href="#scenebuilder">5. Scene Builder en IntelliJ</a></li>
+        <li><a href="#nuevo-proyecto">6. Crear un nuevo proyecto desde la plantilla</a></li>
+        <li><a href="#recomendaciones">7. Recomendaciones finales</a></li>
+    </ul>
+</nav>
+
+<hr>
+
+<h2 id="requisitos">🧱 1. Requisitos previos</h2>
+
+<p>Instala los siguientes componentes en Fedora:</p>
+
+<ul>
+    <li><b>JDK 21 (no solo JRE)</b></li>
+</ul>
+<pre><code>sudo dnf install java-21-openjdk-devel
+java -version
+</code></pre>
+
+<ul>
+    <li><b>Maven</b></li>
+</ul>
+<pre><code>sudo dnf install maven
+mvn -version
+</code></pre>
+
+<ul>
+    <li><b>Scene Builder</b></li>
+</ul>
+<pre><code>/opt/scenebuilder/bin/SceneBuilder &
+</code></pre>
+
+<hr>
+
+<h2 id="configuracion">⚙️ 2. Configuración del entorno</h2>
+<p>Editar el archivo <code>~/.bashrc</code> y asegurar que contiene:</p>
+
+<pre><code>export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+</code></pre>
+
+<p>Recargar y verificar:</p>
+<pre><code>source ~/.bashrc
+echo $JAVA_HOME
+java -version
+</code></pre>
+
+<hr>
+
+<h2 id="estructura">🧩 3. Estructura del proyecto</h2>
+<pre><code>MaestraFX/
+│
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/org/maestra/MainApp.java
+│   │   ├── java/org/maestra/controllers/MainController.java
+│   │   └── resources/org/maestra/MainView.fxml
+│   └── test/
+└── README_MaestraFX.html
+</code></pre>
+
+<p>Esta es la estructura base generada con Maven, compatible con Scene Builder e IntelliJ.</p>
+
+<hr>
+
+<h2 id="ejecucion">🚀 4. Ejecutar el proyecto</h2>
+<p>Desde IntelliJ o desde la terminal (recomendado):</p>
+<pre><code>mvn clean javafx:run
+</code></pre>
+
+<blockquote>
+    💡 Evita usar “Run → MainApp” directamente salvo que hayas configurado las <b>VM Options</b> para incluir los módulos JavaFX.
+</blockquote>
+
+<p>Ejemplo de configuración manual (si quisieras usar Run → MainApp):</p>
+<pre><code>--module-path /home/usuario/javafx-sdk-21.0.9/lib --add-modules javafx.controls,javafx.fxml
+</code></pre>
+
+<hr>
+
+<h2 id="scenebuilder">🧭 5. Scene Builder en IntelliJ</h2>
+
+<p>Configurar la ruta:</p>
+<p><b>File → Settings → Languages & Frameworks → JavaFX</b></p>
+<p>En <b>Path to Scene Builder</b> indica:</p>
+<pre><code>/opt/scenebuilder/bin/SceneBuilder</code></pre>
+
+<p>Para abrir un archivo FXML: clic derecho → <b>Open in Scene Builder</b></p>
+
+<hr>
+
+<h2 id="nuevo-proyecto">🧰 6. Crear un nuevo proyecto desde esta plantilla</h2>
+
+<ol>
+    <li><b>Duplicar la plantilla:</b></li>
+</ol>
+<pre><code>cd ~/IdeaProjects
+cp -r MaestraFX MiNuevoProyectoFX
+cd MiNuevoProyectoFX
+</code></pre>
+
+<ol start="2">
+    <li><b>Editar el <code>pom.xml</code>:</b></li>
+</ol>
+<pre><code>&lt;groupId&gt;org.miempresa&lt;/groupId&gt;
+&lt;artifactId&gt;MiNuevoProyectoFX&lt;/artifactId&gt;
+&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+</code></pre>
+
+<ol start="3">
+    <li><b>Abrir en IntelliJ</b></li>
+    <ul>
+        <li>Verificar SDK = <b>Java 21</b></li>
+        <li>Verificar dependencias Maven</li>
+        <li>Ejecutar con <code>mvn clean javafx:run</code></li>
+    </ul>
+</ol>
+
+<ol start="4">
+    <li><b>Modificar libremente</b>: puedes cambiar controladores, vistas o recursos sin romper la configuración.</li>
+</ol>
+
+<hr>
+
+<h2 id="recomendaciones">🧠 7. Recomendaciones finales</h2>
+<ul>
+    <li>Ejecuta siempre con <code>mvn javafx:run</code> para mantener la coherencia de JavaFX.</li>
+    <li>Guarda la plantilla base para futuros proyectos:</li>
+</ul>
+<pre><code>cp -r ~/IdeaProjects/MaestraFX ~/Plantillas/MaestraFX-Base
+</code></pre>
+
+<ul>
+    <li>Si IntelliJ se comporta de forma extraña:</li>
+</ul>
+<pre><code>File → Invalidate Caches / Restart
+Reload All Maven Projects
+</code></pre>
+
+<hr>
+
+<footer>
+    © Four Seagulls — Plantilla base educativa para proyectos JavaFX en Linux (Fedora + IntelliJ + Maven + SceneBuilder)
+</footer>
+
+</body>
+</html>
