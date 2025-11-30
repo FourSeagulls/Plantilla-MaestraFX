@@ -4,15 +4,20 @@ package org.maestra.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
 public class SiguienteController {
     @FXML
     private Canvas drawingCanvas;
+    @FXML
+    private Button colorButton;
 
     private GraphicsContext gc;
     private boolean isDrawing = false;
+    private Color currentColor = Color.BLACK;
 
     @FXML
     private void initialize() {
@@ -24,6 +29,19 @@ public class SiguienteController {
         drawingCanvas.setOnMousePressed(this::startDrawing);
         drawingCanvas.setOnMouseDragged(this::draw);
         drawingCanvas.setOnMouseReleased(this::stopDrawing);
+    }
+
+    @FXML
+    private void handleColorButton() {
+        ColorPicker colorPicker = new ColorPicker(currentColor);
+        colorPicker.setOnAction(event -> {
+            currentColor = colorPicker.getValue();
+            gc.setStroke(currentColor);
+        });
+
+        // You can show the color picker in a dialog or as a popup
+        // For simplicity, here's a basic implementation:
+        colorPicker.show();
     }
 
     private void startDrawing(MouseEvent event) {
@@ -57,4 +75,23 @@ public class SiguienteController {
     public void setLineWidth(double width) {
         gc.setLineWidth(width);
     }
+
+    @FXML
+    private void setColorRed() {
+        currentColor = Color.RED;
+        gc.setStroke(currentColor);
+    }
+
+    @FXML
+    private void setColorBlue() {
+        currentColor = Color.BLUE;
+        gc.setStroke(currentColor);
+    }
+
+    @FXML
+    private void setColorGreen() {
+        currentColor = Color.GREEN;
+        gc.setStroke(currentColor);
+    }
+
 }
