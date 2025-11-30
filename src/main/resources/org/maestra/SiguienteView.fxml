@@ -15,18 +15,17 @@
     </left>
     <right>
         <VBox spacing="10" alignment="CENTER">
-            <Button fx:id="colorButton" text="Elegir color" onAction="#handleColorButton"/>
-            <HBox spacing="5" alignment="CENTER">
+
                 <Button text="Red" onAction="#setColorRed"/>
                 <Button text="Blue" onAction="#setColorBlue"/>
                 <Button text="Green" onAction="#setColorGreen"/>
-            </HBox>
+                <Button text="Black" onAction="#setColorBlack"/>
         </VBox>
 
     </right>
     <bottom>
         <VBox spacing="10" alignment="CENTER">
-            <Button fx:id="colorButton" text="Elegir color" onAction="#handleColorButton"/>
+            <Button fx:id="colorButton" text="Elegir color" onAction="#elegirColor"/>
         </VBox>
     </bottom>
 </BorderPane>

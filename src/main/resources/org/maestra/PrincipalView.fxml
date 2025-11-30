@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.maestra.controllers.MainController"
+      fx:controller="org.maestra.controllers.PrincipalController"
       alignment="CENTER" spacing="20">
     <Label text="¡Hola desde Scene Builder!" fx:id="label"/>
     <Button text="Púlsame" onAction="#handleButtonAction"/>

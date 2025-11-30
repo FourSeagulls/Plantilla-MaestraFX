@@ -2,12 +2,15 @@ package org.maestra.controllers;
 
 
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class SiguienteController {
     @FXML
@@ -32,6 +35,31 @@ public class SiguienteController {
     }
 
     @FXML
+    private void elegirColor() {
+        ColorPicker colorPicker = new ColorPicker(currentColor);
+
+        // Create a new stage for the color picker
+        Stage colorStage = new Stage();
+        colorStage.initModality(Modality.APPLICATION_MODAL); // Makes it a modal dialog
+        colorStage.setTitle("Choose Color");
+
+        // Set the scene with the color picker
+        Scene scene = new Scene(colorPicker);
+        colorStage.setScene(scene);
+
+        colorPicker.setOnAction(event -> {
+            currentColor = colorPicker.getValue();
+            gc.setStroke(currentColor);
+            colorStage.close(); // Close the color picker after selection
+        });
+
+        // Show the color picker
+        colorStage.showAndWait(); // This makes the window wait for user interaction
+    }
+
+
+    /*
+    @FXML
     private void handleColorButton() {
         ColorPicker colorPicker = new ColorPicker(currentColor);
         colorPicker.setOnAction(event -> {
@@ -43,7 +71,7 @@ public class SiguienteController {
         // For simplicity, here's a basic implementation:
         colorPicker.show();
     }
-
+*/
     private void startDrawing(MouseEvent event) {
         isDrawing = true;
         gc.beginPath();
@@ -91,6 +119,12 @@ public class SiguienteController {
     @FXML
     private void setColorGreen() {
         currentColor = Color.GREEN;
+        gc.setStroke(currentColor);
+    }
+
+    @FXML
+    private void setColorBlack() {
+        currentColor = Color.BLACK;
         gc.setStroke(currentColor);
     }
 

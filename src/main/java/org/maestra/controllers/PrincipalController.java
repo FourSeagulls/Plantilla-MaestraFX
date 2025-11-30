@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class MainController {
+public class PrincipalController {
 
     @FXML
     private Label label;
@@ -22,10 +22,11 @@ public class MainController {
         // Load the FXML file
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/SiguienteView.fxml"));
         Parent root = loader.load();
+        Scene scene = new Scene(root, 800, 600);
 
         // Create a new stage
         Stage stage = new Stage();
-        stage.setScene(new Scene(root, 800, 600));
+        stage.setScene(scene);
 
         // Establece el tamaño mínimo de la ventana
         stage.setMinWidth(800);
