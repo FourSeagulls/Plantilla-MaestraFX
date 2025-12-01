@@ -12,11 +12,13 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+
 public class PizarrinController {
+
     @FXML
-    private Canvas drawingCanvas;
+    private Canvas pizarrinCanvas;
     @FXML
-    private Button colorButton;
+    private Button elegirColor_btn;
 
     private GraphicsContext gc;
     private boolean isDrawing = false;
@@ -24,14 +26,14 @@ public class PizarrinController {
 
     @FXML
     private void initialize() {
-        gc = drawingCanvas.getGraphicsContext2D();
+        gc = pizarrinCanvas.getGraphicsContext2D();
         gc.setLineWidth(2);
         gc.setStroke(Color.BLACK);
 
         // Set up mouse events for drawing
-        drawingCanvas.setOnMousePressed(this::startDrawing);
-        drawingCanvas.setOnMouseDragged(this::draw);
-        drawingCanvas.setOnMouseReleased(this::stopDrawing);
+        pizarrinCanvas.setOnMousePressed(this::startDrawing);
+        pizarrinCanvas.setOnMouseDragged(this::draw);
+        pizarrinCanvas.setOnMouseReleased(this::stopDrawing);
     }
 
     @FXML
@@ -91,7 +93,7 @@ public class PizarrinController {
 
     // Optional: Method to clear the canvas
     public void clearCanvas() {
-        gc.clearRect(0, 0, drawingCanvas.getWidth(), drawingCanvas.getHeight());
+        gc.clearRect(0, 0, pizarrinCanvas.getWidth(), pizarrinCanvas.getHeight());
     }
 
     // Optional: Method to change drawing color

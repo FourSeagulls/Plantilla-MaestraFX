@@ -8,7 +8,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.maestra.controllers.PizarrinController">
     <center>
-        <Canvas fx:id="drawingCanvas" height="400.0" width="600.0" BorderPane.alignment="CENTER" />
+        <Canvas fx:id="pizarrinCanvas" height="400.0" width="600.0" BorderPane.alignment="CENTER" />
     </center>
     <left>
         <Button fx:id="clearButton" onAction="#clearCanvas" text="Limpiar" BorderPane.alignment="CENTER" />
@@ -24,9 +24,9 @@
 
     </right>
     <bottom>
-        <VBox alignment="CENTER" spacing="10">
-            <Button fx:id="colorButton" onAction="#elegirColor" text="Elegir color" />
-        </VBox>
+        <HBox alignment="CENTER" spacing="10">
+            <Button fx:id="elegirColor_btn" onAction="#elegirColor" text="Elegir color" />
+        </HBox>
     </bottom>
    <top>
       <Label fx:id="tituloPizarrin_lbl" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: #8888ff;" text="Área de dibujo" textAlignment="CENTER" BorderPane.alignment="CENTER">
