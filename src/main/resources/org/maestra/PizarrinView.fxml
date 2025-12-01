@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.maestra.controllers.PizarrinController">
+    <center>
+        <Canvas fx:id="drawingCanvas" height="400.0" width="600.0" BorderPane.alignment="CENTER" />
+    </center>
+    <left>
+        <Button fx:id="clearButton" onAction="#clearCanvas" text="Limpiar" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <VBox alignment="CENTER" spacing="10">
+
+                <Button onAction="#setColorRed" text="Red" />
+                <Button onAction="#setColorBlue" text="Blue" />
+                <Button onAction="#setColorGreen" text="Green" />
+                <Button onAction="#setColorBlack" text="Black" />
+        </VBox>
+
+    </right>
+    <bottom>
+        <VBox alignment="CENTER" spacing="10">
+            <Button fx:id="colorButton" onAction="#elegirColor" text="Elegir color" />
+        </VBox>
+    </bottom>
+   <top>
+      <Label fx:id="tituloPizarrin_lbl" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-background-color: #8888ff;" text="Área de dibujo" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Caveat Regular" size="26.0" />
+         </font>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </padding>
+      </Label>
+   </top>
+</BorderPane>

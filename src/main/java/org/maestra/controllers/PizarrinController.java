@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class SiguienteController {
+public class PizarrinController {
     @FXML
     private Canvas drawingCanvas;
     @FXML

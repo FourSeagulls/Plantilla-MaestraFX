@@ -6,8 +6,8 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.maestra.controllers.PrincipalController"
-      alignment="CENTER" spacing="20">
+      alignment="CENTER" spacing="20" style="-fx-background-color: #aaaaff;">
     <Label text="¡Hola desde Scene Builder!" fx:id="label"/>
     <Button text="Púlsame" onAction="#handleButtonAction"/>
-    <Button fx:id="siguiente" text="Siguiente" onAction="#seguir"/>
+    <Button fx:id="pizarrin_btn" text="Pizarrín" onAction="#abrirPizarrin"/>
 </VBox>
