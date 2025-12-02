@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.maestra.controllers.FigurasController"
+            prefHeight="400.0" prefWidth="600.0">
+    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" spacing="10" style="-fx-background-color: #8888ff;">
+        <Button fx:id="arriba_btn" text="Botón de arriba"/>
+        <Button fx:id="derecha_btn" text="Botón de la derecha"/>
+        <Button fx:id="izquierda_btn" text="Botón de la izquierda"/>
+        <Button fx:id="abajo_btn" text="Botón de abajo"/>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0" AnchorPane.topAnchor="0.0" spacing="10" style="-fx-background-color: #8888ff;">
+        <Button fx:id="uno_btn" text="Botón uno" styleClass="btn_menu"/>
+        <Button fx:id="dos_btn" text="Botón dos" styleClass="btn_menu"/>
+        <Button fx:id="tres_btn" text="Botón tres" styleClass="btn_menu"/>
+        <Button fx:id="cuatro_btn" text="Botón cuatro" styleClass="btn_menu"/>
+    </HBox>
+</AnchorPane>

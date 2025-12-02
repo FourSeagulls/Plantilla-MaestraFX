@@ -1,3 +1,15 @@
+.root {
+    -fx-background-image: url('images/img_fondo.png');
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover; /* Esto hace que la imagen cubra todo el espacio */
+}
+.modo_claro {
+    -fx-background-image: url('images/fondo2.png');
+        -fx-background-position: center center;
+        -fx-background-repeat: no-repeat;
+        -fx-background-size: cover;
+}
 #label {
 -fx-background-color: #ffff70;
 -fx-padding: 10px;
@@ -22,4 +34,9 @@
 
 .vbox {
     -fx-background-color: #00ff00;
+}
+
+.btn_menu {
+    -fx-height: 14px;
+    -fx-font-size: 12px;
 }

@@ -5,9 +5,11 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      alignment="CENTER" spacing="20" style="-fx-background-color: #aaaaff;"
+      alignment="CENTER" spacing="20"
       fx:controller="org.maestra.controllers.PrincipalController">
     <Label fx:id="label" text="¡Hola desde Scene Builder!"/>
-    <Button text="Púlsame" onAction="#handleButtonAction"/>
+    <Button fx:id="pulsame_btn" text="Púlsame" onAction="#pulsamePulsado"/>
     <Button fx:id="pizarrin_btn" text="Pizarrín" onAction="#abrirPizarrin"/>
+    <Button fx:id="figuras_btn" text="Figuras" onAction="#abrirFiguras"/>
+    <Button fx:id="alta_btn" text="Alta" onAction="#abrirAlta"/>
 </VBox>
