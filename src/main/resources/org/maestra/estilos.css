@@ -10,7 +10,7 @@
         -fx-background-repeat: no-repeat;
         -fx-background-size: cover;
 }
-#label {
+.label {
 -fx-background-color: #ffff70;
 -fx-padding: 10px;
 -fx-background-radius: 10px;

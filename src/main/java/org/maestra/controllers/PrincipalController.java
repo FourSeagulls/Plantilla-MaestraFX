@@ -13,7 +13,7 @@ import java.util.Optional;
 public class PrincipalController {
 
     @FXML
-    private Label label;
+    private Label saludo_lbl;
 
     @FXML
     private void pulsamePulsado() {
@@ -21,7 +21,7 @@ public class PrincipalController {
         // Crear un cuadro de diálogo de confirmación
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmación");
-        alert.setHeaderText(null); // Opcional: para que no se muestre el encabezado
+        alert.setHeaderText("No te atreverás"); // Opcional -> (null) : para que no se muestre el encabezado
         alert.setContentText("¿Estás seguro de que quieres realizar esta acción?");
 
         // Mostrar el diálogo y esperar la respuesta del usuario
@@ -30,10 +30,10 @@ public class PrincipalController {
         // Comprobar qué botón ha pulsado el usuario
         if (result.isPresent() && result.get() == ButtonType.OK) {
             System.out.println("El usuario ha confirmado la acción.");
-            label.setText("¡Te has atrevido a hacerlo!");
+            saludo_lbl.setText("¡Te has atrevido a hacerlo!");
         } else {
             System.out.println("El usuario ha cancelado la acción.");
-            label.setText("¡Demasiado tarde para arrepentimientos!");
+            saludo_lbl.setText("¡Demasiado tarde para arrepentimientos!");
         }
     }
 
