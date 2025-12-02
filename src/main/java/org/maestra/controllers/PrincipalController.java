@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.util.Optional;
 
@@ -113,5 +112,33 @@ public class PrincipalController {
         stage.show();
 
     }
+
+    @FXML
+    Button creditos_btn;
+    @FXML
+    public void abrirCreditos() throws IOException {
+        System.out.println("¿Cuál es el problema?");
+        // Load the FXML file
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/CreditosView.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        // Create a new stage
+        Stage stage = new Stage();
+        stage.setTitle("Créditos");
+        stage.setScene(scene);
+
+        // Establece el tamaño mínimo de la ventana
+        stage.setMinWidth(600);
+        stage.setMinHeight(200);
+
+        // Opcional: Establece el tamaño preferido
+        stage.setWidth(600);
+        stage.setHeight(300);
+
+        // Show the new stage
+        stage.show();
+    }
+
 
 }

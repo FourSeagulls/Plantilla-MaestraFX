@@ -12,4 +12,5 @@
     <Button fx:id="pizarrin_btn" text="Pizarrín" onAction="#abrirPizarrin"/>
     <Button fx:id="figuras_btn" text="Figuras" onAction="#abrirFiguras"/>
     <Button fx:id="alta_btn" text="Alta" onAction="#abrirAlta"/>
+    <Button fx:id="creditos_btn" text="Créditos" onAction="#abrirCreditos"/>
 </VBox>
