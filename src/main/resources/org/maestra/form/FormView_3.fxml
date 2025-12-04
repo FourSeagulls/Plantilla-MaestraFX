@@ -6,9 +6,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.maestra.form.FormView3"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.maestra.controllers.form.FormController_3"
+      prefHeight="400.0" prefWidth="600.0" >
+    <Label fx:id="form_3_lbl" text="Formulario 3" textAlignment="CENTER" layoutX="20" layoutY="10"/>
+    <Button fx:id="enviar_btn" text="Enviar Formulario" layoutX="340" layoutY="360" onAction="#enviarFormulario"/>
+</Pane>
