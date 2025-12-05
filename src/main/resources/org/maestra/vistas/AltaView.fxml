@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="200.0"
+      prefWidth="600.0"
+      style="-fx-background-color: #8888ff;"
+      xmlns="http://javafx.com/javafx/11.0.14-internal"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.maestra.controllers.AltaController">
+    <VBox alignment="CENTER"
+          prefHeight="100.0"
+          prefWidth="500.0"
+          layoutY="2"
+          layoutX="20"
+          spacing="10.0">
+        <HBox alignment="CENTER"
+              prefHeight="100.0"
+              prefWidth="200.0"
+              spacing="10.0">
+            <Label text="Nombre usuario:" />
+            <TextField fx:id="campoNombre"
+                       style="-fx-background-color: #ffff70; -fx-padding: 10px;" />
+        </HBox>
+        <HBox alignment="CENTER"
+              prefHeight="100.0"
+              prefWidth="200.0"
+              spacing="10.0">
+            <Label text="Apodo usuario:" />
+            <TextField fx:id="campoApodo"
+                       style="-fx-background-color: #ffff70; -fx-padding: 10px;" />
+        </HBox>
+    </VBox>
+    <Button fx:id="altaConfirma_btn"
+            layoutX="20"
+            layoutY="120"
+            onAction="#confirmarAlta"
+            text="Confirmar" />
+    <Label fx:id="confirmado_lbl"
+           layoutX="120"
+           layoutY="120"
+           text="Por confirmar" />
+
+</Pane>

@@ -1,0 +1,24 @@
+--------------------------------------
+        «Tomar los datos insertados en Alta y
+        hacer un Label de saludo en Configuración »
+----->  PARA ELLO VAMOS A TENER QUE APLICAR EL PATRÓN SINGLETON <-----------<---
+--------------------------------------------------------------------------------
+Dar estilo a todos los Campos de Texto desde el CSS
+a los label y
+a los botones
+-----------------
+Ponerle más utilidades a Pizarrín
+------------------
+En Figuras:
+	Crear panel de control de datos para crear figuras con forma y color.
+	Crear panel de control para desplazar las figuras incluso poner delante/detrás
+------------------
+
+Crear una clase que almacene todos los datos que se van a utilizar por el usuario y configuraciones.
+A esos datos se puede acceder para CRUD
+Al final, al cerrar el programa esos datos se guardan en una sesión que podrá ser Reiniciada en otra Partida
+-------------
+
+Algunas ventans se cerrará al pasar ala siguiente ¿ Cual es la sentencia?
+Cuando se cierra una ventana ¿queda reseteada o en el mismo estado ¿Se puede volcer al estado anterior?
+------------

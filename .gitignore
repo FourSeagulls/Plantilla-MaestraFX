@@ -20,3 +20,6 @@ Thumbs.db
 
 # JavaFX cache
 *.fxml.bin
+
+# Archivo mio de tareas complimentar
+pasosiguiente.fsd

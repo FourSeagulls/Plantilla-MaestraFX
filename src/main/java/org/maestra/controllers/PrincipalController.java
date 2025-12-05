@@ -40,7 +40,7 @@ public class PrincipalController {
     @FXML
     private void abrirPizarrin() throws Exception {
         // Load the FXML file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/PizarrinView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/vistas/PizarrinView.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root, 800, 600);
 
@@ -65,7 +65,7 @@ public class PrincipalController {
     @FXML
     private void abrirFiguras() throws Exception {
         // Load the FXML file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/FigurasView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/vistas/FigurasView.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root, 800, 600);
 
@@ -91,7 +91,7 @@ public class PrincipalController {
     @FXML
     public void abrirAlta() throws IOException {
         // Load the FXML file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/AltaView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/vistas/AltaView.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -119,7 +119,7 @@ public class PrincipalController {
     public void abrirCreditos() throws IOException {
         System.out.println("¿Cuál es el problema?");
         // Load the FXML file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/CreditosView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/vistas/CreditosView.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
