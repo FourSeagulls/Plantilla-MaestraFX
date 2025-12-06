@@ -10,6 +10,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Optional;
 
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+
+
 public class PrincipalController {
 
     @FXML
@@ -135,6 +139,28 @@ public class PrincipalController {
         // Opcional: Establece el tamaño preferido
         stage.setWidth(600);
         stage.setHeight(300);
+
+        // Show the new stage
+        stage.show();
+    }
+
+    public void abrirVisorDatos() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/maestra/vistas/VisorDatosView.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        // Create a new stage
+        Stage stage = new Stage();
+        stage.setTitle("Visor de datos");
+        stage.setScene(scene);
+
+        // Establece el tamaño mínimo de la ventana
+        stage.setMinWidth(600);
+        stage.setMinHeight(400);
+
+        // Opcional: Establece el tamaño preferido
+        stage.setWidth(600);
+        stage.setHeight(400);
 
         // Show the new stage
         stage.show();

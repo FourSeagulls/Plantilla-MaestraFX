@@ -14,4 +14,5 @@
     <Button fx:id="alta_btn" text="Alta" onAction="#abrirAlta"/>
     <Button fx:id="creditos_btn" text="Créditos" onAction="#abrirCreditos"/>
     <Label text="Que lo disfrutes"/>
+    <Button onAction="#abrirVisorDatos" fx:id="datos_btn" text="Mostrar datos"/>
 </VBox>
