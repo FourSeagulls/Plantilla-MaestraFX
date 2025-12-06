@@ -31,6 +31,12 @@ public class VisorDatosController {
         actualizarDatosEnPantalla();
     }
 
+    @FXML
+    private void cargarSesion() {
+        DatosCompartidos.getInstance().cargarSesion();
+        actualizarDatosEnPantalla();
+    }
+
     private void actualizarDatosEnPantalla() {
         lblResumen.setText(DatosCompartidos.getInstance().getResumen());
 
